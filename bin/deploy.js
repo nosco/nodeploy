@@ -1,4 +1,4 @@
-#!/bin/env node
+#!/usr/bin/env node
 
 var path = require('path');
 var nopt = require('nopt');
