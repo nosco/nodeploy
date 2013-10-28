@@ -1,12 +1,18 @@
 {
   "name": "nodeploy",
-  "version": "0.0.0",
+  "version": "0.0.2",
+  "bin": {
+    "deploy": "./bin/deploy.js"
+  },
   "description": "Deploy a commit after successful test",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "author": "Elias G. Schneevoigt",
+  "author": {
+    "name": "Elias G. Schneevoigt",
+    "email": "eliasgs@gmail.com"
+  },
   "license": "MIT",
   "dependencies": {
     "async": "~0.2.9",
