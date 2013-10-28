@@ -1,4 +1,4 @@
-# nodeploy
+# nodeploy [![Build Status](https://travis-ci.org/nosco/nodeploy.png)](https://travis-ci.org/nosco/nodeploy)
 Simple deployment script to be run on production server after successful
 travis-ci build.
 
