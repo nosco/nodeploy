@@ -1,0 +1,22 @@
+{
+  "name": "nodeploy",
+  "version": "0.0.0",
+  "description": "Deploy a commit after successful test",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Elias G. Schneevoigt",
+  "license": "MIT",
+  "dependencies": {
+    "async": "~0.2.9",
+    "nopt": "~2.1.2"
+  },
+  "devDependencies": {
+    "mocha": "~1.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nosco/nodeploy.git"
+  }
+}
