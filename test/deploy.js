@@ -8,7 +8,7 @@ describe('deploy', function () {
   var repoDir = options.cwd + 'repo/';
   var deployDir = options.cwd + 'www/';
   // npm is sometimes rather slow
-  this.timeout(10000);
+  this.timeout(30000);
   before(function (done) {
     exec('tar zxf test/fixtures.tar.gz -C test', function (err) {
       if (err) return done(err);
