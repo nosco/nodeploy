@@ -8,6 +8,7 @@ var options = {
   'branch': String,
   'commit': String,
   'repoDir': path,
+  'releaseDir': path,
   'deployDir': path,
   'help': String
 };
@@ -20,8 +21,10 @@ var _options = {
 var args = nopt(options, _options);
 if (args.help) help(0);
 if (!(args.branch && args.commit && args.repoDir && args.deployDir)) help(1);
+if (!args.releaseDir) args.releaseDir = process.env.HOME + '/releases';
 
-deploy(args.branch, args.commit, args.repoDir, args.deployDir);
+
+deploy(args.branch, args.commit, args.repoDir, args.releaseDir, args.deployDir);
 
 function help(exitCode) {
   exitCode = (exitCode == undefined)?1:exitCode;

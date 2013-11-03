@@ -2,6 +2,11 @@
 Simple deployment script to be run on production server after successful
 travis-ci build.
 
+## Note
+  * Remember to create a deploy key and add to github.
+  * ```--releaseDir``` defaults to ```$HOME/releases```
+  * All directories must exist.
+
 ## Usage example 
 Using ssh with an ```authorized_keys``` entry like:
 ```bash
