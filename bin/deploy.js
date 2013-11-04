@@ -2,6 +2,7 @@
 
 var path = require('path');
 var nopt = require('nopt');
+var pkg = require('../package.json');
 var deploy = require('../lib/deploy');
 
 var options = {
@@ -10,16 +11,24 @@ var options = {
   'repoDir': path,
   'releaseDir': path,
   'deployDir': path,
+  'version': Boolean,
   'help': String
 };
 var _options = {
   'b': '--branch',
   'c': '--commit',
+  'v': '--version',
   'h': '--help'
 };
 
 var args = nopt(options, _options);
+
 if (args.help) help(0);
+if (args.version) {
+  console.log(pkg.version);
+  process.exit(0);
+}
+
 if (!(args.branch && args.commit && args.repoDir && args.deployDir)) help(1);
 if (!args.releaseDir) args.releaseDir = process.env.HOME + '/releases';
 
