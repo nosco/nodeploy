@@ -5,7 +5,7 @@ describe('deploy', function () {
   var options = {cwd: 'test/fixtures'};
   var opt = {};
   opt.branch = 'testing';
-  opt.commit = '8e49b5320a9c20f922c7c3d6e584360fd0a166fb';
+  opt.commit = 'bd8f6fe219e26407f1bd02f10df38526141baa57';
   opt.repoDir = options.cwd + '/repo';
   opt.releaseDir = options.cwd + '/releases';
   opt.deployDir = options.cwd + '/www';
@@ -29,5 +29,5 @@ describe('deploy', function () {
   });
   it('should fire npm restart', function (done) {
     exec('test -e restarted', options, done);
-  });
+});
 });
