@@ -32,8 +32,7 @@ if (args.version) {
 if (!(args.branch && args.commit && args.repoDir && args.deployDir)) help(1);
 if (!args.releaseDir) args.releaseDir = process.env.HOME + '/releases';
 
-
-deploy(args.branch, args.commit, args.repoDir, args.releaseDir, args.deployDir);
+deploy(args);
 
 function help(exitCode) {
   exitCode = (exitCode == undefined)?1:exitCode;
