@@ -5,7 +5,7 @@ describe('deploy', function () {
   var options = {cwd: 'test/fixtures'};
   var opt = {};
   opt.branch = 'testing';
-  opt.commit = '941f066596a1f26d918b248baeb9a20a545903e6';
+  opt.commit = '8e49b5320a9c20f922c7c3d6e584360fd0a166fb';
   opt.repoDir = options.cwd + '/repo';
   opt.releaseDir = options.cwd + '/releases';
   opt.deployDir = options.cwd + '/www';
@@ -26,5 +26,8 @@ describe('deploy', function () {
   });
   it('should link to current release', function (done) {
     exec('diff -r --exclude=".git" www releases/live', options, done);
+  });
+  it('should fire npm restart', function (done) {
+    exec('test -e restarted', options, done);
   });
 });
