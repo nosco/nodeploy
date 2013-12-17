@@ -40,13 +40,17 @@ the new release.
 
 ## Usage example 
 
-Using ssh with an ```authorized_keys``` entry like:
+Using ssh with an ``authorized_keys`` entry like(``travis pubkey`` gives you
+the repository's public key):
 
 ```bash
 command="deploy $SSH_ORIGINAL_COMMAND",no-port-forwarding,no-X11-forwarding,\
 no-agent-forwarding,no-pty ssh-rsa AAAA...==
 ```
-this should work for private repos build by [travis-ci.com](https://travis-ci.com)
+
+Put the following in your ``.travis.yml`` file - this should work for private
+repository's build by [travis-ci.com](https://travis-ci.com).
+
 ```yaml
 after_success:
   - ssh -o StrictHostKeyChecking=no [user@]hostname "deploy -b $TRAVIS_BRANCH -c $TRAVIS_COMMIT --repoDir <path> --deployDir <path>"
