@@ -38,7 +38,8 @@ function help(exitCode) {
   exitCode = (exitCode == undefined)?1:exitCode;
   var message = [
     'usage: deploy --branch|-b <branch> --commit|-c <commit>',
-    '              --repoDir <path> --deployDir <path>'].join('\n');
+    '              --repoDir <path> --deployDir <path> [--releaseDir <path>]'
+  ].join('\n');
   console.log(message);
   process.exit(exitCode);
 }
