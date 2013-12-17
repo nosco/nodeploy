@@ -4,7 +4,7 @@
   "bin": {
     "deploy": "./bin/deploy.js"
   },
-  "description": "Deploy a commit after successful test",
+  "description": "Deploy a commit after a successful build",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
