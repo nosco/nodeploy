@@ -11,6 +11,7 @@ var options = {
   'repoDir': path,
   'releaseDir': path,
   'deployDir': path,
+  'createCopy': Boolean,
   'version': Boolean,
   'help': String
 };
@@ -38,7 +39,8 @@ function help(exitCode) {
   exitCode = (exitCode == undefined)?1:exitCode;
   var message = [
     'usage: deploy --branch|-b <branch> --commit|-c <commit>',
-    '              --repoDir <path> --deployDir <path> [--releaseDir <path>]'
+    '              --repoDir <path> --deployDir <path> [--releaseDir <path>]',
+    '              [--createCopy]'
   ].join('\n');
   console.log(message);
   process.exit(exitCode);
