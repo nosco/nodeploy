@@ -9,6 +9,7 @@ describe('deploy', function () {
   opt.repoDir = options.cwd + '/repo';
   opt.releaseDir = options.cwd + '/releases';
   opt.deployDir = options.cwd + '/www';
+  opt.createCopy = true;
   before(function (done) {
     exec('tar zxf test/fixtures.tar.gz -C test', function (err) {
       if (err) return done(err);
