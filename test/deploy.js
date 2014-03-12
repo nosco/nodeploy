@@ -30,5 +30,5 @@ describe('deploy', function () {
   });
   it('should fire npm restart', function (done) {
     exec('test -e restarted', options, done);
-});
+  });
 });
